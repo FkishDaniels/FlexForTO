@@ -1,10 +1,10 @@
 # Изменение
 ## Обновил CUP
 
-terminal FOR,NEXT,TO,EQUALS,STEP,COMMANDS,INTEGER,ENDFOR,IDENT,WhiteSpace,Semicolon,EXIT,LOOP,PLUS,MINUS,TIMES,DEVIDE;
+terminal FOR,NEXT,TO,EQUALS,STEP,COMMANDS,INTEGER,ENDFOR,IDENT,WhiteSpace,Semicolon,EXIT,LOOP,PLUS,MINUS,TIMES,DEVIDE;<br>
 
 
-/** Non-terminals **/
+/** Non-terminals **/<br>
 
 
 non terminal s,step,exit,next,loop,params,commands,expression,termin,expressionMain,expression2,identOrInteger;
@@ -13,61 +13,61 @@ non terminal s,step,exit,next,loop,params,commands,expression,termin,expressionM
 
 start with s;
 
-/** ============= GRAMMAR ============= */
-params::= IDENT EQUALS INTEGER TO INTEGER step expression2 exit loop;
-s ::= FOR params next | s FOR params next;
-expression ::= INTEGER | expression PLUS expression
-               | expression MINUS expression
-               | expression TIMES expression
-               | expression DEVIDE expression;
-expression2 ::= | IDENT EQUALS expression;
-next ::= ENDFOR|NEXT;
-step ::= | STEP INTEGER;
-exit ::= | EXIT;
-loop ::= | LOOP;
+/** ============= GRAMMAR ============= */<br>
+params::= IDENT EQUALS INTEGER TO INTEGER step expression2 exit loop;<br>
+s ::= FOR params next | s FOR params next;<br>
+expression ::= INTEGER | expression PLUS expression<br>
+               | expression MINUS expression<br>
+               | expression TIMES expression<br>
+               | expression DEVIDE expression;<br>
+expression2 ::= | IDENT EQUALS expression;<br>
+next ::= ENDFOR|NEXT;<br>
+step ::= | STEP INTEGER;<br>
+exit ::= | EXIT;<br>
+loop ::= | LOOP;<br>
 
 ## ОБНОВИЛ FLEX
-ALPHA=[A-Za-z]
-DIGIT=[0-9]
-NEWLINE=\r|\n|\r\n
+ALPHA=[A-Za-z]<br>
+DIGIT=[0-9]<br>
+NEWLINE=\r|\n|\r\n<br>
 
-WhiteSpace = {NEWLINE} | [   \t\f]
-Semicolon = ;
+WhiteSpace = {NEWLINE} | [   \t\f]<br>
+Semicolon = ;<br>
 
-INTEGER = -?{DIGIT}+
+INTEGER = -?{DIGIT}+<br>
 
-FOR = FOR
-TO = TO
-NEXT = NEXT
-ENDFOR = ENDFOR
-EQUALS = =
-STEP = STEP
-EXIT = EXIT
-LOOP = LOOP
-PLUS = \+
-MINUS = -
-TIMES = \*
-DEVIDE = \/
-IDENT = {ALPHA}({ALPHA}|{DIGIT}|_)*
+FOR = FOR<br>
+TO = TO<br>
+NEXT = NEXT<br>
+ENDFOR = ENDFOR<br>
+EQUALS = =<br>
+STEP = STEP<br>
+EXIT = EXIT<br>
+LOOP = LOOP<br>
+PLUS = \+<br>
+MINUS = -<br>
+TIMES = \*<br>
+DEVIDE = \/<br>
+IDENT = {ALPHA}({ALPHA}|{DIGIT}|_)*<br>
 
-%%
+%%<br>
 
-/* lexical rules */
+/* lexical rules */<br>
 
 
-{FOR} {return symbol(sym.FOR);}
-{ENDFOR} {return symbol(sym.ENDFOR);}
-{TO} {return symbol(sym.TO);}
-{NEXT} {return symbol(sym.NEXT);}
-{EQUALS} {return symbol(sym.EQUALS);}
-{PLUS} {return symbol(sym.PLUS);}
-{MINUS} {return symbol(sym.MINUS);}
-{TIMES} {return symbol(sym.TIMES);}
-{DEVIDE} {return symbol(sym.DEVIDE);}
-{STEP} {return symbol(sym.STEP);}
-{EXIT} {return symbol(sym.EXIT);}
-{LOOP} {return symbol(sym.LOOP);}
-{INTEGER} {return symbol(sym.INTEGER);}
-{IDENT} {return symbol(sym.IDENT);}
-{WhiteSpace} { /* ignore*/ }
-[^] { throw new Error("Illegal character <"+yytext()+">"); }
+{FOR} {return symbol(sym.FOR);}<br>
+{ENDFOR} {return symbol(sym.ENDFOR);}<br>
+{TO} {return symbol(sym.TO);}<br>
+{NEXT} {return symbol(sym.NEXT);}<br>
+{EQUALS} {return symbol(sym.EQUALS);}<br>
+{PLUS} {return symbol(sym.PLUS);}<br>
+{MINUS} {return symbol(sym.MINUS);}<br>
+{TIMES} {return symbol(sym.TIMES);}<br>
+{DEVIDE} {return symbol(sym.DEVIDE);}<br>
+{STEP} {return symbol(sym.STEP);}<br>
+{EXIT} {return symbol(sym.EXIT);}<br>
+{LOOP} {return symbol(sym.LOOP);}<br>
+{INTEGER} {return symbol(sym.INTEGER);}<br>
+{IDENT} {return symbol(sym.IDENT);}<br>
+{WhiteSpace} { /* ignore*/ }<br>
+[^] { throw new Error("Illegal character <"+yytext()+">"); }<br>
