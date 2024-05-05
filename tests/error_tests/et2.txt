@@ -1,0 +1,3 @@
+FOR VARNAME = 7 TO
+2 + 2 = 4
+ENDFOR

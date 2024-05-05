@@ -1,0 +1,3 @@
+FOR VARNAME 1 = TO
+2 + 2 = 4
+ENDFOR

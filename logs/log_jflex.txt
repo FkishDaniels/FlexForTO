@@ -1,0 +1,9 @@
+Reading "Lexer.flex"
+
+Warning: Macro "Semicolon" has been declared but never used.
+Constructing NFA : 92 states in NFA
+Converting NFA to DFA : 
+........................................
+42 states before minimization, 37 states in minimized DFA
+Old file "C:\Users\Daniil\Desktop\homeWork\java\Lexer.java" saved as "C:\Users\Daniil\Desktop\homeWork\java\Lexer.java~"
+Writing code to "C:\Users\Daniil\Desktop\homeWork\java\Lexer.java"

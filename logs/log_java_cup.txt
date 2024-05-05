@@ -1,0 +1,113 @@
+Warning : Terminal "COMMANDS" was declared but never used
+Warning : Terminal "WhiteSpace" was declared but never used
+Warning : Terminal "Semicolon" was declared but never used
+Warning : Non terminal "expressionMain" was declared but never used
+Warning : Non terminal "identOrInteger" was declared but never used
+Warning : Non terminal "commands" was declared but never used
+Warning : Non terminal "termin" was declared but never used
+Warning : *** Shift/Reduce conflict found in state #28
+  between expression ::= expression PLUS expression (*) 
+  and     expression ::= expression (*) PLUS expression 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #28
+  between expression ::= expression PLUS expression (*) 
+  and     expression ::= expression (*) MINUS expression 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #28
+  between expression ::= expression PLUS expression (*) 
+  and     expression ::= expression (*) TIMES expression 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #28
+  between expression ::= expression PLUS expression (*) 
+  and     expression ::= expression (*) DEVIDE expression 
+  under symbol DEVIDE
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #26
+  between expression ::= expression MINUS expression (*) 
+  and     expression ::= expression (*) PLUS expression 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #26
+  between expression ::= expression MINUS expression (*) 
+  and     expression ::= expression (*) MINUS expression 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #26
+  between expression ::= expression MINUS expression (*) 
+  and     expression ::= expression (*) TIMES expression 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #26
+  between expression ::= expression MINUS expression (*) 
+  and     expression ::= expression (*) DEVIDE expression 
+  under symbol DEVIDE
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #27
+  between expression ::= expression DEVIDE expression (*) 
+  and     expression ::= expression (*) PLUS expression 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #27
+  between expression ::= expression DEVIDE expression (*) 
+  and     expression ::= expression (*) MINUS expression 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #27
+  between expression ::= expression DEVIDE expression (*) 
+  and     expression ::= expression (*) TIMES expression 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #27
+  between expression ::= expression DEVIDE expression (*) 
+  and     expression ::= expression (*) DEVIDE expression 
+  under symbol DEVIDE
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #25
+  between expression ::= expression TIMES expression (*) 
+  and     expression ::= expression (*) PLUS expression 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #25
+  between expression ::= expression TIMES expression (*) 
+  and     expression ::= expression (*) MINUS expression 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #25
+  between expression ::= expression TIMES expression (*) 
+  and     expression ::= expression (*) TIMES expression 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+Warning : *** Shift/Reduce conflict found in state #25
+  between expression ::= expression TIMES expression (*) 
+  and     expression ::= expression (*) DEVIDE expression 
+  under symbol DEVIDE
+  Resolved in favor of shifting.
+
+------- CUP v0.11b 20160615 (GIT 4ac7450) Parser Generation Summary -------
+  0 errors and 23 warnings
+  19 terminals, 12 non-terminals, and 19 productions declared, 
+  producing 36 unique parse states.
+  7 terminals declared but not used.
+  0 non-terminals declared but not used.
+  0 productions never reduced.
+  16 conflicts detected (4236 expected).
+  Code written to "parser.java", and "sym.java".
+---------------------------------------------------- (CUP v0.11b 20160615 (GIT 4ac7450))

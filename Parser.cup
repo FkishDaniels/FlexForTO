@@ -1,0 +1,41 @@
+import java_cup.runtime.*;
+import java.util.*;
+import java.io.*;
+
+parser code {:
+
+    public void syntax_error(Symbol current_token) {
+        report_error(
+            "Syntax error at line " + (current_token.left+1) + ", column "
+            + current_token.right + "\n", null
+        );
+    }
+
+
+:};
+/** Terminals */
+
+terminal FOR,NEXT,TO,EQUALS,STEP,COMMANDS,INTEGER,ENDFOR,IDENT,WhiteSpace,Semicolon,EXIT,LOOP,PLUS,MINUS,TIMES,DEVIDE;
+
+
+/** Non-terminals **/
+
+
+non terminal s,step,exit,next,loop,params,commands,expression,termin,expressionMain,expression2,identOrInteger;
+
+
+
+start with s;
+
+/** ============= GRAMMAR ============= */
+params::= IDENT EQUALS INTEGER TO INTEGER step expression2 exit loop;
+s ::= FOR params next | s FOR params next;
+expression ::= INTEGER | expression PLUS expression
+               | expression MINUS expression
+               | expression TIMES expression
+               | expression DEVIDE expression;
+expression2 ::= | IDENT EQUALS expression;
+next ::= ENDFOR|NEXT;
+step ::= | STEP INTEGER;
+exit ::= | EXIT;
+loop ::= | LOOP;
